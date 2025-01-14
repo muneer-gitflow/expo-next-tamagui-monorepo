@@ -2,6 +2,7 @@ import Providers from '@/providers/providers';
 import { Metadata } from 'next';
 import Script from 'next/script';
 import './globals.css';
+import { NextTamaguiProvider } from './NextTamaguiProvider';
 
 export const metadata: Metadata = {
   title: 'Next.js Shopify App',
@@ -24,7 +25,9 @@ export default async function RootLayout({
         <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js" />
       </head>
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <NextTamaguiProvider>{children}</NextTamaguiProvider>
+        </Providers>
         {/* This is the recommended way to load script, but it doesn't work */}
         <Script
           src="https://cdn.shopify.com/shopifycloud/app-bridge.js"

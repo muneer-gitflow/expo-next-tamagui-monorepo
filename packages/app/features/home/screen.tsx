@@ -1,3 +1,5 @@
+"use client";
+
 import { Anchor, Button, H1, MyMotiLink, Paragraph, Separator, Text, XStack, YStack } from '@my/ui'
 import { Banana, Monitor, Moon, Sun } from '@tamagui/lucide-icons'
 import { useThemeStore } from 'app/zustand'
