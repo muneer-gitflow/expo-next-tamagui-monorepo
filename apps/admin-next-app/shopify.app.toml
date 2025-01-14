@@ -1,0 +1,44 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "37290f28ecff5ec7d53ad5d71f2135c9"
+name = "gitspark-remix-test-app"
+handle = "gitspark-remix-test-app-1"
+application_url = "https://remix-auth-app-gitspark-perfumez.gitspark.cloud/auth/callback"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "gitspark-perfumez-demo.myshopify.com"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = ""
+
+[auth]
+redirect_urls = [
+  "https://remix-auth-app-gitspark-perfumez.gitspark.cloud/auth/callback/auth/callback",
+  "https://remix-auth-app-gitspark-perfumez.gitspark.cloud/auth/callback/auth/shopify/callback",
+  "https://remix-auth-app-gitspark-perfumez.gitspark.cloud/auth/callback/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-10"
+
+  [[webhooks.subscriptions]]
+  uri = "/webhooks/customers/data_request"
+  compliance_topics = [ "customers/data_request" ]
+
+  [[webhooks.subscriptions]]
+  uri = "/webhooks/customers/redact"
+  compliance_topics = [ "customers/redact" ]
+
+  [[webhooks.subscriptions]]
+  uri = "/webhooks/shop/redact"
+  compliance_topics = [ "shop/redact" ]
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[pos]
+embedded = false

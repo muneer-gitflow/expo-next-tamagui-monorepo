@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "e61ed2b560298a1a44c18c87fd785254"
+application_url = "https://gitspark.ngrok.dev"
+embedded = true
+name = "nextapp-tst"
+handle = "nextapp-tst"
+
+[webhooks]
+api_version = "2025-01"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = ""
+
+[auth]
+redirect_urls = [
+  "https://gitspark.ngrok.dev/auth/callback",
+  "https://gitspark.ngrok.dev/auth/shopify/callback",
+  "https://gitspark.ngrok.dev/api/auth/callback"
+]
+
+[pos]
+embedded = false
+
+[build]
+dev_store_url = "gitspark-perfumez-demo.myshopify.com"
+automatically_update_urls_on_dev = true

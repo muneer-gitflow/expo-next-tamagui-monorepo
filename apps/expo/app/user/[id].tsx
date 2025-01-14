@@ -1,4 +1,4 @@
-import { UserDetailScreen } from 'app/features/user/detail-screen'
+import { LandingScreen } from 'app/features/landing/screen'
 import { Stack } from 'expo-router'
 
 export default function Screen() {
@@ -13,7 +13,8 @@ export default function Screen() {
           gestureDirection: 'horizontal',
         }}
       />
-      <UserDetailScreen />
+      {/* <UserDetailScreen /> */}
+      <LandingScreen />
     </>
   )
 }

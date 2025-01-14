@@ -1,0 +1,63 @@
+.itemWrapper {
+  position: relative;
+  padding: 6px;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.controls {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  border-radius: 6px;
+  padding: 6px 12px;
+  display: flex;
+  gap: 12px;
+  z-index: 5;
+  transition: all 0.2s ease;
+  width: 70px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Group hover effect */
+.controls:hover {
+  background-color: #528f65;
+}
+
+.controlButton {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button hover effect */
+.controlButton:hover {
+  color: #ff4d4f;
+}
+
+.itemWrapper:first-child .controls {
+  background-color: #528f65;
+}
+
+.itemWrapper:first-child .controlButton {
+  color: white;
+}
+
+.active {
+  border-width: 4px;
+  border-color: #528f65;
+  border-radius: 10px;
+}

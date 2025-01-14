@@ -2,7 +2,10 @@
   "name": "expo-next-tamagui-monorepo",
   "version": "0.3.1",
   "private": true,
-  "workspaces": ["./apps/*", "./packages/*"],
+  "workspaces": [
+    "./apps/*",
+    "./packages/*"
+  ],
   "scripts": {
     "android": "bun --filter 'expo-app' android",
     "build": "bun --filter '@my/ui' build",
@@ -15,7 +18,7 @@
     "postinstall": "bun run build",
     "watch": "bun --filter '@my/ui' watch",
     "web": "bun run build && bun --filter 'next-app' dev",
-    "web:admin": "bun run build && bun --filter 'admin-app' dev",
+    "web:shopify": "bun --filter 'shopify-admin' dev",
     "web:extract": "DISABLE_EXTRACTION=false bun --fitler 'next-app' dev",
     "web:prod": "bun run build && bun --filter 'next-app' build",
     "web:prod:serve": "bun --filter 'next-app' serve"
