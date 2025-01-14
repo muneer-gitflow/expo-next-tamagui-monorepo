@@ -1,0 +1,113 @@
+.dropdown {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+}
+
+.trigger {
+  width: 100%;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid #c4cdd5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 14px;
+  color: #202223;
+}
+
+.chevron {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  transition: transform 0.2s;
+}
+
+.chevronUp {
+  transform: rotate(180deg);
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #c4cdd5;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.section {
+  border-bottom: 1px solid #dfe3e8;
+  padding: 8px 0;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.sectionHeader {
+  padding: 4px 12px;
+  font-weight: 500;
+  color: #637381;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  background: #f4f6f8;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+}
+
+.advanced {
+  background: #f4f6f8;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  color: #637381;
+}
+
+.option {
+  width: 100%;
+  padding: 8px 12px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #202223;
+  display: flex;
+  align-items: center;
+}
+
+.option:hover {
+  background: #f4f6f8;
+}
+
+.selected {
+  background: #f4f6f8;
+  font-weight: 500;
+}
+
+.createButtonWrapper {
+  padding: 4px 8px;
+}
+
+.plusIcon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
