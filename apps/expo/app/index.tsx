@@ -9,7 +9,7 @@ export default function Screen() {
           title: 'Home',
         }}
       />
-      <HomeScreen />
+      <HomeScreen appName="Expo" />
     </>
   )
 }

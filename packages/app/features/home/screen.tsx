@@ -1,5 +1,5 @@
 import { Anchor, Button, H1, MyMotiLink, Paragraph, Separator, Text, XStack, YStack } from '@my/ui'
-import { Monitor, Moon, Sun } from '@tamagui/lucide-icons'
+import { Banana, Monitor, Moon, Sun } from '@tamagui/lucide-icons'
 import { useThemeStore } from 'app/zustand'
 import { useLink } from 'solito/navigation'
 import { Clock } from './Clock'
@@ -11,7 +11,7 @@ const icons = {
   system: <Monitor />,
 }
 
-export function HomeScreen() {
+export function HomeScreen({ appName = 'Tamagui' }: { appName: string }) {
   const { scheme, toggleScheme } = useThemeStore()
   const linkProps = useLink({
     href: '/user/nate',
@@ -22,7 +22,7 @@ export function HomeScreen() {
       <YStack gap="$4">
         <Clock />
         <H1 ta="center" col="$color12">
-          Welcome to Tamagui.
+          Welcome to {appName}.
         </H1>
         <Paragraph ta="center" col="$color10">
           Here's a basic starter to show navigating from one screen to another.
@@ -38,6 +38,7 @@ export function HomeScreen() {
           <Anchor col="$blue10" href="https://twitter.com/natebirdman" target="_blank">
             @natebirdman,
           </Anchor>
+          <Banana />
           <Anchor
             col="$purple10"
             href="https://github.com/tamagui/tamagui"
